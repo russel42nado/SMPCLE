@@ -6,7 +6,7 @@
              MONMSG     MSGID(CPF3838)
              CLRSAVF    FILE(CODASAVF/LIBH44CODA)
              SAV        DEV('/QSYS.LIB/CODASAVF.LIB/LIBH44CODA.FILE+
-						  ') OBJ(('/LIBH44CODA' *INCLUDE)) +  
+			  ') OBJ(('/LIBH44CODA' *INCLUDE)) +  
                         SUBTREE(*ALL)
              MONMSG     MSGID(CPF3838)
 /* Backup Test Directories                                           */
@@ -23,7 +23,7 @@
              CLRSAVF    FILE(CODASAVF/EXPRESS)                         
              SAV        DEV('/QSYS.LIB/CODASAVF.LIB/EXPRESS.FILE') +   
                           OBJ(('/QIBM/UserData/WebSphere/AppServer/V8+
-						  5/Express/profiles' *INCLUDE)) SUBTREE(*ALL)
+			  5/Express/profiles' *INCLUDE)) SUBTREE(*ALL)
              MONMSG     MSGID(CPF3838)                                 
 /* Backup WebServer Configuration                                    */
 			 CLRSAVF    FILE(CODASAVF/WEBSVR)  
