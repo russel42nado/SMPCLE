@@ -1,0 +1,43 @@
+             PGM
+/* Backup Production Directories                                     */
+             CLRSAVF    FILE(CODASAVF/CODAH44)
+             SAV        DEV('/QSYS.LIB/CODASAVF.LIB/CODAH44.FILE') + 
+                          OBJ(('/CODAH44' *INCLUDE)) SUBTREE(*ALL)
+             MONMSG     MSGID(CPF3838)
+             CLRSAVF    FILE(CODASAVF/LIBH44CODA)
+             SAV        DEV('/QSYS.LIB/CODASAVF.LIB/LIBH44CODA.FILE+
+						  ') OBJ(('/LIBH44CODA' *INCLUDE)) +  
+                        SUBTREE(*ALL)
+             MONMSG     MSGID(CPF3838)
+/* Backup Test Directories                                           */
+             CLRSAVF    FILE(CODASAVF/CODAZ44)                         
+             SAV        DEV('/QSYS.LIB/CODASAVF.LIB/CODAZ44.FILE') +   
+                          OBJ(('/CODAZ44' *INCLUDE)) SUBTREE(*ALL)     
+             MONMSG     MSGID(CPF3838)          
+             CLRSAVF    FILE(CODASAVF/LIBL92CODA)                      
+             SAV        DEV('/QSYS.LIB/CODASAVF.LIB/LIBL92CODA.FILE+  
+                          ') OBJ(('/LIBL92CODA' *INCLUDE)) +           
+                          SUBTREE(*ALL)                                
+             MONMSG     MSGID(CPF3838)                               
+/* WAS Profiles Configuration                                        */
+             CLRSAVF    FILE(CODASAVF/EXPRESS)                         
+             SAV        DEV('/QSYS.LIB/CODASAVF.LIB/EXPRESS.FILE') +   
+                          OBJ(('/QIBM/UserData/WebSphere/AppServer/V8+
+						  5/Express/profiles' *INCLUDE)) SUBTREE(*ALL)
+             MONMSG     MSGID(CPF3838)                                 
+/* Backup WebServer Configuration                                    */
+			 CLRSAVF    FILE(CODASAVF/WEBSVR)  
+			 SAV        DEV('/QSYS.LIB/CODASAVF.LIB/WEBSVR.FILE') +   
+                          OBJ(('/www/coda*' *INCLUDE)) SUBTREE(*ALL)
+             MONMSG     MSGID(CPF3838)
+/* Backup Libraries                                                  */
+             SAVLIB     LIB(CODA*) DEV(TAP03) ENDOPT(*REWIND) +
+                          DTACPR(*YES)
+             MONMSG     MSGID(CPF3751)
+			 CLRSAVF    FILE(CODASAVF/WEBSVR)
+             CLRSAVF    FILE(CODASAVF/EXPRESS)
+			 CLRSAVF    FILE(CODASAVF/CODAZ44)
+             CLRSAVF    FILE(CODASAVF/LIBL92CODA)
+             CLRSAVF    FILE(CODASAVF/CODAH44)
+             CLRSAVF    FILE(CODASAVF/LIBH44CODA)
+             ENDPGM
